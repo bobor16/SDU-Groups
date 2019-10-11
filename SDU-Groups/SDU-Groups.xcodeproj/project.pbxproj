@@ -15,8 +15,6 @@
 		FDBA727E2348E78D0039B986 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FDBA727C2348E78D0039B986 /* LaunchScreen.storyboard */; };
 		FDBA72882348FAEC0039B986 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDBA72872348FAEC0039B986 /* MapViewController.swift */; };
 		FDBA728A2348FCF80039B986 /* GroupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDBA72892348FCF80039B986 /* GroupViewController.swift */; };
-		FDBA728C2349031E0039B986 /* GroupImg.png in Resources */ = {isa = PBXBuildFile; fileRef = FDBA728B2349031E0039B986 /* GroupImg.png */; };
-		FDBA7290234905E20039B986 /* MapImg.png in Resources */ = {isa = PBXBuildFile; fileRef = FDBA728F234905E20039B986 /* MapImg.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,8 +28,6 @@
 		FDBA727F2348E78D0039B986 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FDBA72872348FAEC0039B986 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		FDBA72892348FCF80039B986 /* GroupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupViewController.swift; sourceTree = "<group>"; };
-		FDBA728B2349031E0039B986 /* GroupImg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = GroupImg.png; sourceTree = "<group>"; };
-		FDBA728F234905E20039B986 /* MapImg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = MapImg.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,8 +73,6 @@
 		FDBA72852348E8100039B986 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				FDBA728F234905E20039B986 /* MapImg.png */,
-				FDBA728B2349031E0039B986 /* GroupImg.png */,
 				FDBA72702348E78B0039B986 /* AppDelegate.swift */,
 				FDBA727A2348E78D0039B986 /* Assets.xcassets */,
 				FDBA727C2348E78D0039B986 /* LaunchScreen.storyboard */,
@@ -155,9 +149,7 @@
 			files = (
 				FDBA727E2348E78D0039B986 /* LaunchScreen.storyboard in Resources */,
 				FDBA727B2348E78D0039B986 /* Assets.xcassets in Resources */,
-				FDBA728C2349031E0039B986 /* GroupImg.png in Resources */,
 				FDBA72762348E78B0039B986 /* Main.storyboard in Resources */,
-				FDBA7290234905E20039B986 /* MapImg.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -319,13 +311,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 7BV23TXF5F;
+				DEVELOPMENT_TEAM = 8VP2CK62GJ;
 				INFOPLIST_FILE = "SDU-Groups/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.application.SDU-Groups";
+				PRODUCT_BUNDLE_IDENTIFIER = "dk.sdu.sdu-groups";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -337,13 +329,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 7BV23TXF5F;
+				DEVELOPMENT_TEAM = 8VP2CK62GJ;
 				INFOPLIST_FILE = "SDU-Groups/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.application.SDU-Groups";
+				PRODUCT_BUNDLE_IDENTIFIER = "dk.sdu.sdu-groups";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
