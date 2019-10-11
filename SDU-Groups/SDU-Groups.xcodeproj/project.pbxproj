@@ -30,8 +30,8 @@
 		FDBA727F2348E78D0039B986 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FDBA72872348FAEC0039B986 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		FDBA72892348FCF80039B986 /* GroupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupViewController.swift; sourceTree = "<group>"; };
-		FDBA728B2349031E0039B986 /* GroupImg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = GroupImg.png; path = ../../../../../Desktop/GroupImg.png; sourceTree = "<group>"; };
-		FDBA728F234905E20039B986 /* MapImg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = MapImg.png; path = ../../../../../Desktop/MapImg.png; sourceTree = "<group>"; };
+		FDBA728B2349031E0039B986 /* GroupImg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = GroupImg.png; sourceTree = "<group>"; };
+		FDBA728F234905E20039B986 /* MapImg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = MapImg.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
