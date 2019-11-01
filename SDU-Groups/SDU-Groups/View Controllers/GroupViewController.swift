@@ -10,12 +10,16 @@ import UIKit
 
 class GroupViewController: UIViewController {
     
+    let urlG = "www.google.com"
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-    }
     
+        
+    }
 
+}
     /*
     // MARK: - Navigation
 
@@ -26,4 +30,3 @@ class GroupViewController: UIViewController {
     }
     */
 
-}
