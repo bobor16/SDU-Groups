@@ -10,7 +10,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Map View Controller-->
+        <!--SDU - Maps-->
         <scene sceneID="yV7-d1-9Ta">
             <objects>
                 <viewController id="oV9-Nx-7iy" customClass="MapViewController" customModule="SDU_Groups" customModuleProvider="target" sceneMemberID="viewController">
@@ -18,65 +18,39 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="0Do-qD-rT7">
-                                <rect key="frame" x="0.0" y="88" width="414" height="725"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="725" id="7Al-tA-lQB"/>
-                                    <constraint firstAttribute="width" constant="414" id="Gf3-y7-FSC"/>
-                                </constraints>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" mapType="mutedStandard" showsUserLocation="YES" showsPointsOfInterest="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zxW-Lh-kuw">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <outlet property="delegate" destination="oV9-Nx-7iy" id="fWl-K8-cJk"/>
+                                </connections>
                             </mapView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <constraints>
-                            <constraint firstItem="0Do-qD-rT7" firstAttribute="bottom" secondItem="QVj-4d-O83" secondAttribute="bottom" id="3Nq-wn-tqw"/>
-                            <constraint firstItem="0Do-qD-rT7" firstAttribute="leading" secondItem="QVj-4d-O83" secondAttribute="leading" id="AMX-EV-cHq"/>
-                            <constraint firstItem="0Do-qD-rT7" firstAttribute="top" secondItem="QVj-4d-O83" secondAttribute="top" id="ehQ-Lf-hmG"/>
-                            <constraint firstItem="0Do-qD-rT7" firstAttribute="trailing" secondItem="QVj-4d-O83" secondAttribute="trailing" id="ghW-3x-S3Z"/>
-                        </constraints>
                         <viewLayoutGuide key="safeArea" id="QVj-4d-O83"/>
                     </view>
-                    <navigationItem key="navigationItem" id="aqC-h2-sh0"/>
+                    <navigationItem key="navigationItem" title="SDU - Maps" id="aqC-h2-sh0"/>
                     <connections>
-                        <outlet property="mapView" destination="0Do-qD-rT7" id="can-Fj-dVO"/>
+                        <outlet property="mapView" destination="zxW-Lh-kuw" id="P5I-PC-5kd"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="X6T-hZ-f83" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-533.33333333333337" y="1593.75"/>
         </scene>
-        <!--Group View Controller-->
+        <!--SDU - Maps-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="GroupViewController" customModule="SDU_Groups" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="SDU - Groups" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="t1a-BZ-bhz">
-                                <rect key="frame" x="0.0" y="88" width="414" height="50"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Oc1-fG-abH">
-                                <rect key="frame" x="0.0" y="146" width="414" height="50"/>
-                                <state key="normal" title="Button"/>
-                                <connections>
-                                    <action selector="RedirectSDU:" destination="BYZ-38-t0r" eventType="touchUpInside" id="sK9-1H-9oQ"/>
-                                </connections>
-                            </button>
-                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <constraints>
-                            <constraint firstItem="t1a-BZ-bhz" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="4jC-Bm-uKE"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Oc1-fG-abH" secondAttribute="trailing" id="7xd-xd-EeG"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="t1a-BZ-bhz" secondAttribute="trailing" id="JTY-om-vM8"/>
-                            <constraint firstItem="Oc1-fG-abH" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="N8Z-BY-mNb"/>
-                            <constraint firstItem="Oc1-fG-abH" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="rBo-kV-lNW"/>
-                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
-                    <navigationItem key="navigationItem" id="AFU-bq-Zs7"/>
+                    <navigationItem key="navigationItem" title="SDU - Maps" id="AFU-bq-Zs7">
+                        <barButtonItem key="backBarButtonItem" title="back" id="gzz-SF-4UG"/>
+                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
