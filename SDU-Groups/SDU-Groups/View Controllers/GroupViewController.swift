@@ -8,17 +8,49 @@
 
 import UIKit
 
-class GroupViewController: UIViewController {
+
+class GroupViewController: UIViewController{
     
-    let urlG = "www.google.com"
+    func openURL(urlSt: String!) {
+        if let url = URL(string:urlSt), !url.absoluteString.isEmpty {
+            UIApplication.shared.open(url, options: [:], completionHandler: nil)
+        }
+    }
+    
+    func openURL2(url2: String) {
+        if let url = URL(string: url2) {
+            do {
+                let contents = try String(contentsOf: url)
+                print(contents)
+            } catch {
+                
+            }
+        } else {
+            print("Bad url")
+        }
+    }
+
+    
+    
+    @IBAction func bookRoomBtn(_ sender: UIButton) {
+        if let url = URL(string: "https://www.hackingwithswift.com") {
+            UIApplication.shared.open(url)
+        }
+    }
+    @IBAction func myBookings(_ sender: UIButton) {
+        print("GG")
+    }
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-    
         
+    
     }
-
+    
+    
+    
 }
     /*
     // MARK: - Navigation
