@@ -10,10 +10,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Settings-->
+        <!--Group Contract-->
         <scene sceneID="chR-Kg-KXY">
             <objects>
-                <viewController title="Settings" id="mZe-3P-BCH" sceneMemberID="viewController">
+                <viewController title="Group Contract" id="mZe-3P-BCH" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="F5e-BB-Wx9">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -23,12 +23,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9d7-bX-wr6" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1813" y="2324"/>
+            <point key="canvasLocation" x="-2046" y="2545"/>
         </scene>
-        <!--Schedule-->
+        <!--Settings-->
         <scene sceneID="oyp-XX-gCR">
             <objects>
-                <viewController title="Schedule" id="yGf-fp-IqV" sceneMemberID="viewController">
+                <viewController title="Settings" id="yGf-fp-IqV" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="HL4-Hy-H43">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -38,13 +38,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xPn-zD-X40" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-928" y="2324"/>
+            <point key="canvasLocation" x="-1194" y="2545"/>
         </scene>
-        <!--Group Contract-->
+        <!--Schedule-->
         <scene sceneID="qgN-Kt-aIB">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="9Ru-4X-kir" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <viewController title="Group Contract" id="iNY-iG-iYT" sceneMemberID="viewController">
+                <viewController title="Schedule" id="iNY-iG-iYT" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="jLU-VK-AN2">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -52,70 +51,91 @@
                         <viewLayoutGuide key="safeArea" id="oQ2-LH-az3"/>
                     </view>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9Ru-4X-kir" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2630" y="2324"/>
+            <point key="canvasLocation" x="-2894" y="2545"/>
         </scene>
         <!--SDU - Groups-->
         <scene sceneID="Jbj-OW-d96">
             <objects>
-                <viewController id="RRY-Tv-C1H" sceneMemberID="viewController">
+                <viewController id="RRY-Tv-C1H" customClass="GroupViewController" customModule="SDU_Groups" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="BKC-Yu-Q1m">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tRD-E6-INz">
-                                <rect key="frame" x="0.0" y="88" width="414" height="30"/>
-                                <state key="normal" title="Schedule"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="sduStart" translatesAutoresizingMaskIntoConstraints="NO" id="aoc-dL-hzn">
+                                <rect key="frame" x="0.0" y="88" width="414" height="725"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Cpz-Bh-JkR">
+                                <rect key="frame" x="0.0" y="98" width="414" height="36"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="lightTextColor"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                <state key="normal" title="Schedule">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
                                 <connections>
-                                    <segue destination="yGf-fp-IqV" kind="show" id="zHy-f5-D7V"/>
+                                    <action selector="Schedule:" destination="Fdt-Lj-R5Q" eventType="touchUpInside" id="XhT-kG-fur"/>
+                                    <action selector="Schedule:" destination="RRY-Tv-C1H" eventType="touchUpInside" id="fXO-3Q-Qro"/>
+                                    <segue destination="iNY-iG-iYT" kind="show" id="48N-Kd-GIW"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yFU-7D-A6R">
-                                <rect key="frame" x="0.0" y="126" width="414" height="30"/>
-                                <state key="normal" title="Book Room"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZCF-HH-J5Y">
+                                <rect key="frame" x="0.0" y="144" width="414" height="36"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="lightTextColor"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                <state key="normal" title="Book room">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
                                 <connections>
-                                    <action selector="bookRoomBtn:" destination="Fdt-Lj-R5Q" eventType="touchUpInside" id="pLN-GQ-jfL"/>
+                                    <action selector="BookRoom:" destination="Fdt-Lj-R5Q" eventType="touchUpInside" id="NU8-dT-I8H"/>
+                                    <action selector="BookRoom:" destination="RRY-Tv-C1H" eventType="touchUpInside" id="OU7-8t-ekZ"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rxr-zd-bWJ">
-                                <rect key="frame" x="0.0" y="164" width="414" height="30"/>
-                                <state key="normal" title="My Bookings"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ePY-f1-v7W">
+                                <rect key="frame" x="0.0" y="236" width="414" height="36"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="lightTextColor"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                <state key="normal" title="Settings">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
                                 <connections>
-                                    <action selector="myBookings:" destination="Fdt-Lj-R5Q" eventType="touchUpInside" id="iDs-9w-rY8"/>
+                                    <segue destination="yGf-fp-IqV" kind="show" id="ibg-et-pyk"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zZc-1X-vTO">
-                                <rect key="frame" x="0.0" y="202" width="414" height="30"/>
-                                <state key="normal" title="Group Contract"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="T4T-VG-1Ys">
+                                <rect key="frame" x="0.0" y="190" width="414" height="36"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="lightTextColor"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                <state key="normal" title="Group contract">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
                                 <connections>
-                                    <segue destination="iNY-iG-iYT" kind="show" id="n9C-OL-Nei"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fFR-h0-6Mc">
-                                <rect key="frame" x="0.0" y="240" width="414" height="30"/>
-                                <state key="normal" title="Settings"/>
-                                <connections>
-                                    <segue destination="mZe-3P-BCH" kind="show" id="HXU-vS-IWN"/>
+                                    <segue destination="mZe-3P-BCH" kind="show" id="ZFY-ah-3Y2"/>
                                 </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="yFU-7D-A6R" firstAttribute="leading" secondItem="dbs-lV-FGi" secondAttribute="leading" id="0So-RO-wsq"/>
-                            <constraint firstItem="Rxr-zd-bWJ" firstAttribute="trailing" secondItem="zZc-1X-vTO" secondAttribute="trailing" id="1K6-Ph-DL1"/>
-                            <constraint firstItem="Rxr-zd-bWJ" firstAttribute="trailing" secondItem="fFR-h0-6Mc" secondAttribute="trailing" id="2Hl-WC-pZe"/>
-                            <constraint firstItem="fFR-h0-6Mc" firstAttribute="top" secondItem="zZc-1X-vTO" secondAttribute="bottom" constant="8" symbolic="YES" id="6sh-4S-dXK"/>
-                            <constraint firstItem="tRD-E6-INz" firstAttribute="top" secondItem="dbs-lV-FGi" secondAttribute="top" id="CwI-R3-qih"/>
-                            <constraint firstItem="Rxr-zd-bWJ" firstAttribute="leading" secondItem="zZc-1X-vTO" secondAttribute="leading" id="Edc-Am-ZCZ"/>
-                            <constraint firstItem="dbs-lV-FGi" firstAttribute="trailing" secondItem="tRD-E6-INz" secondAttribute="trailing" id="TC9-Dj-QV8"/>
-                            <constraint firstItem="Rxr-zd-bWJ" firstAttribute="trailing" secondItem="yFU-7D-A6R" secondAttribute="trailing" id="VRt-Iw-hff"/>
-                            <constraint firstItem="zZc-1X-vTO" firstAttribute="top" secondItem="Rxr-zd-bWJ" secondAttribute="bottom" constant="8" symbolic="YES" id="d2l-9j-k4l"/>
-                            <constraint firstItem="tRD-E6-INz" firstAttribute="leading" secondItem="dbs-lV-FGi" secondAttribute="leading" id="da2-Jr-SZe"/>
-                            <constraint firstItem="Rxr-zd-bWJ" firstAttribute="top" secondItem="yFU-7D-A6R" secondAttribute="bottom" constant="8" symbolic="YES" id="gzp-gW-NWL"/>
-                            <constraint firstItem="dbs-lV-FGi" firstAttribute="trailing" secondItem="yFU-7D-A6R" secondAttribute="trailing" id="hBz-hW-48a"/>
-                            <constraint firstItem="Rxr-zd-bWJ" firstAttribute="top" secondItem="BKC-Yu-Q1m" secondAttribute="top" constant="164" id="pkQ-y9-J2a"/>
-                            <constraint firstItem="Rxr-zd-bWJ" firstAttribute="leading" secondItem="yFU-7D-A6R" secondAttribute="leading" id="wdP-yI-iPQ"/>
-                            <constraint firstItem="Rxr-zd-bWJ" firstAttribute="leading" secondItem="fFR-h0-6Mc" secondAttribute="leading" id="z15-8F-dfN"/>
+                            <constraint firstItem="ZCF-HH-J5Y" firstAttribute="leading" secondItem="dbs-lV-FGi" secondAttribute="leading" id="1EO-eZ-dvA"/>
+                            <constraint firstItem="T4T-VG-1Ys" firstAttribute="top" secondItem="ZCF-HH-J5Y" secondAttribute="bottom" constant="10" id="2tb-aZ-OxG"/>
+                            <constraint firstItem="aoc-dL-hzn" firstAttribute="leading" secondItem="dbs-lV-FGi" secondAttribute="leading" id="326-SO-AJk"/>
+                            <constraint firstItem="dbs-lV-FGi" firstAttribute="bottom" secondItem="aoc-dL-hzn" secondAttribute="bottom" id="77x-HY-zWb"/>
+                            <constraint firstItem="T4T-VG-1Ys" firstAttribute="leading" secondItem="dbs-lV-FGi" secondAttribute="leading" id="7tp-u6-i6N"/>
+                            <constraint firstItem="aoc-dL-hzn" firstAttribute="top" secondItem="dbs-lV-FGi" secondAttribute="top" id="ATx-Ll-NJM"/>
+                            <constraint firstItem="T4T-VG-1Ys" firstAttribute="top" secondItem="ZCF-HH-J5Y" secondAttribute="bottom" constant="10" id="BIZ-MG-10L"/>
+                            <constraint firstItem="Cpz-Bh-JkR" firstAttribute="top" secondItem="dbs-lV-FGi" secondAttribute="top" constant="10" id="Cey-il-8gm"/>
+                            <constraint firstItem="ePY-f1-v7W" firstAttribute="top" secondItem="T4T-VG-1Ys" secondAttribute="bottom" constant="10" id="Enn-V7-jeE"/>
+                            <constraint firstItem="T4T-VG-1Ys" firstAttribute="trailing" secondItem="dbs-lV-FGi" secondAttribute="trailing" id="I9B-El-FlN"/>
+                            <constraint firstItem="Cpz-Bh-JkR" firstAttribute="top" secondItem="dbs-lV-FGi" secondAttribute="top" constant="10" id="JA0-zr-gwi"/>
+                            <constraint firstItem="ZCF-HH-J5Y" firstAttribute="top" secondItem="Cpz-Bh-JkR" secondAttribute="bottom" constant="10" id="MPQ-30-yCy"/>
+                            <constraint firstItem="ZCF-HH-J5Y" firstAttribute="top" secondItem="Cpz-Bh-JkR" secondAttribute="bottom" constant="10" id="Mts-oI-0JH"/>
+                            <constraint firstItem="Cpz-Bh-JkR" firstAttribute="trailing" secondItem="dbs-lV-FGi" secondAttribute="trailing" id="OBm-Zb-QDD"/>
+                            <constraint firstItem="aoc-dL-hzn" firstAttribute="trailing" secondItem="dbs-lV-FGi" secondAttribute="trailing" id="YQG-mi-h7t"/>
+                            <constraint firstItem="Cpz-Bh-JkR" firstAttribute="leading" secondItem="dbs-lV-FGi" secondAttribute="leading" id="ZBa-3u-3ph"/>
+                            <constraint firstItem="ePY-f1-v7W" firstAttribute="leading" secondItem="dbs-lV-FGi" secondAttribute="leading" id="mcq-vS-kCh"/>
+                            <constraint firstItem="ePY-f1-v7W" firstAttribute="top" secondItem="T4T-VG-1Ys" secondAttribute="bottom" constant="10" id="nXS-A8-VRy"/>
+                            <constraint firstItem="ePY-f1-v7W" firstAttribute="trailing" secondItem="dbs-lV-FGi" secondAttribute="trailing" id="uyq-yw-Sep"/>
+                            <constraint firstItem="ZCF-HH-J5Y" firstAttribute="trailing" secondItem="dbs-lV-FGi" secondAttribute="trailing" id="zZ7-xS-9PS"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="dbs-lV-FGi"/>
                     </view>
@@ -124,7 +144,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xgf-g3-4N8" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="Fdt-Lj-R5Q" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="-1813" y="1594"/>
+            <point key="canvasLocation" x="-2046.376811594203" y="1648.6607142857142"/>
         </scene>
         <!--SDU - Groups-->
         <scene sceneID="yV7-d1-9Ta">
@@ -145,6 +165,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="QVj-4d-O83"/>
                     </view>
+                    <tabBarItem key="tabBarItem" title="Item" image="MapImg" id="Zdh-aQ-ZbI"/>
                     <navigationItem key="navigationItem" title="SDU - Groups" id="aqC-h2-sh0"/>
                     <connections>
                         <outlet property="mapView" destination="zxW-Lh-kuw" id="P5I-PC-5kd"/>
@@ -152,45 +173,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="X6T-hZ-f83" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-533" y="1594"/>
-        </scene>
-        <!--GroupViewController-->
-        <scene sceneID="2G2-T6-yFd">
-            <objects>
-                <navigationController title="GroupViewController" automaticallyAdjustsScrollViewInsets="NO" id="KTM-Wo-cH8" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Group" image="GroupImg.png" selectedImage="GroupImg.png" id="lZ7-x3-NAZ"/>
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="XQD-oG-Ky0">
-                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="RRY-Tv-C1H" kind="relationship" relationship="rootViewController" id="2fr-Dz-TgG"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="qBY-Ck-Eg0" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-1813" y="751"/>
-        </scene>
-        <!--MapViewController-->
-        <scene sceneID="9Kg-Xn-hIh">
-            <objects>
-                <navigationController title="MapViewController" automaticallyAdjustsScrollViewInsets="NO" id="dAV-S2-6A4" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Map" image="MapImg.png" selectedImage="MapImg.png" id="GOZ-ab-1iR"/>
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="zt6-sY-wFV">
-                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="oV9-Nx-7iy" kind="relationship" relationship="rootViewController" id="eKQ-Ni-UrZ"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="sd6-Ge-QQF" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-533" y="751"/>
+            <point key="canvasLocation" x="-342" y="751"/>
         </scene>
         <!--Home-->
         <scene sceneID="nXo-3P-cE8">
@@ -203,17 +186,37 @@
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
                     <connections>
-                        <segue destination="KTM-Wo-cH8" kind="relationship" relationship="viewControllers" id="YqT-zc-Rwa"/>
-                        <segue destination="dAV-S2-6A4" kind="relationship" relationship="viewControllers" id="tVA-zz-38M"/>
+                        <segue destination="i8w-Sg-rmQ" kind="relationship" relationship="viewControllers" id="8nV-TE-fua"/>
+                        <segue destination="oV9-Nx-7iy" kind="relationship" relationship="viewControllers" id="dpb-RB-4PK"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vI2-yS-9kl" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-1194" y="-184"/>
         </scene>
+        <!--Item-->
+        <scene sceneID="qfT-bf-rJG">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="i8w-Sg-rmQ" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" image="GroupImg" id="CMV-jy-k7R"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="WvZ-H3-WjA">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="RRY-Tv-C1H" kind="relationship" relationship="rootViewController" id="rVv-gC-yxm"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="MwV-ND-cMj" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2046" y="751"/>
+        </scene>
     </scenes>
     <resources>
-        <image name="GroupImg.png" width="25.116279602050781" height="25.116279602050781"/>
-        <image name="MapImg.png" width="1.4486922025680542" height="1.4486922025680542"/>
+        <image name="GroupImg" width="30" height="30"/>
+        <image name="MapImg" width="30" height="30"/>
+        <image name="sduStart" width="945" height="1869"/>
     </resources>
 </document>
