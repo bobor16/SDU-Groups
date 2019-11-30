@@ -3,10 +3,13 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		81310B79F8782FB8C9CBD978 /* Pods_SDU_Groups.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C834928AE46B8A6268ABCB7C /* Pods_SDU_Groups.framework */; };
+		FD406498238D92C000279D17 /* GroupContractViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD406497238D92C000279D17 /* GroupContractViewController.swift */; };
+		FD40649D239149D900279D17 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = FD40649C239149D800279D17 /* GoogleService-Info.plist */; };
 		FDBA72712348E78B0039B986 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDBA72702348E78B0039B986 /* AppDelegate.swift */; };
 		FDBA72732348E78B0039B986 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDBA72722348E78B0039B986 /* ViewController.swift */; };
 		FDBA72762348E78B0039B986 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FDBA72742348E78B0039B986 /* Main.storyboard */; };
@@ -18,9 +21,14 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		28C1D509ECF951E1A259ECB4 /* Pods-SDU-Groups.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SDU-Groups.debug.xcconfig"; path = "Target Support Files/Pods-SDU-Groups/Pods-SDU-Groups.debug.xcconfig"; sourceTree = "<group>"; };
+		B92CD41121BBB83458617C80 /* Pods-SDU-Groups.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SDU-Groups.release.xcconfig"; path = "Target Support Files/Pods-SDU-Groups/Pods-SDU-Groups.release.xcconfig"; sourceTree = "<group>"; };
+		C834928AE46B8A6268ABCB7C /* Pods_SDU_Groups.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SDU_Groups.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FD406497238D92C000279D17 /* GroupContractViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupContractViewController.swift; sourceTree = "<group>"; };
+		FD40649C239149D800279D17 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		FDBA726D2348E78B0039B986 /* SDU-Groups.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "SDU-Groups.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FDBA72702348E78B0039B986 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		FDBA72722348E78B0039B986 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		FDBA72722348E78B0039B986 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ViewController.swift; path = ../ViewController.swift; sourceTree = "<group>"; };
 		FDBA72752348E78B0039B986 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		FDBA72782348E78B0039B986 /* SDU_Groups.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = SDU_Groups.xcdatamodel; sourceTree = "<group>"; };
 		FDBA727A2348E78D0039B986 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -35,17 +43,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				81310B79F8782FB8C9CBD978 /* Pods_SDU_Groups.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		59AF8D5BD135C36F97FF17CD /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				28C1D509ECF951E1A259ECB4 /* Pods-SDU-Groups.debug.xcconfig */,
+				B92CD41121BBB83458617C80 /* Pods-SDU-Groups.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		FD406499238D980900279D17 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C834928AE46B8A6268ABCB7C /* Pods_SDU_Groups.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		FDBA72642348E78A0039B986 = {
 			isa = PBXGroup;
 			children = (
 				FDBA726F2348E78B0039B986 /* SDU-Groups */,
 				FDBA726E2348E78B0039B986 /* Products */,
+				FD406499238D980900279D17 /* Frameworks */,
+				59AF8D5BD135C36F97FF17CD /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -63,9 +91,9 @@
 				FDBA72852348E8100039B986 /* Supporting Files */,
 				FDBA72862348FAA30039B986 /* View Controllers */,
 				FDBA72742348E78B0039B986 /* Main.storyboard */,
-				FDBA72722348E78B0039B986 /* ViewController.swift */,
 				FDBA727F2348E78D0039B986 /* Info.plist */,
 				FDBA72772348E78B0039B986 /* SDU_Groups.xcdatamodeld */,
+				FD40649C239149D800279D17 /* GoogleService-Info.plist */,
 			);
 			path = "SDU-Groups";
 			sourceTree = "<group>";
@@ -83,6 +111,8 @@
 		FDBA72862348FAA30039B986 /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				FDBA72722348E78B0039B986 /* ViewController.swift */,
+				FD406497238D92C000279D17 /* GroupContractViewController.swift */,
 				FDBA72872348FAEC0039B986 /* MapViewController.swift */,
 				FDBA72892348FCF80039B986 /* GroupViewController.swift */,
 			);
@@ -96,9 +126,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = FDBA72822348E78D0039B986 /* Build configuration list for PBXNativeTarget "SDU-Groups" */;
 			buildPhases = (
+				BB52582DDAEFC1E509FDDEB8 /* [CP] Check Pods Manifest.lock */,
 				FDBA72692348E78B0039B986 /* Sources */,
 				FDBA726A2348E78B0039B986 /* Frameworks */,
 				FDBA726B2348E78B0039B986 /* Resources */,
+				1D436CA0960830E51B4930CA /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -121,6 +153,11 @@
 				TargetAttributes = {
 					FDBA726C2348E78B0039B986 = {
 						CreatedOnToolsVersion = 10.3;
+						SystemCapabilities = {
+							com.apple.Maps.iOS = {
+								enabled = 0;
+							};
+						};
 					};
 				};
 			};
@@ -148,6 +185,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FDBA727E2348E78D0039B986 /* LaunchScreen.storyboard in Resources */,
+				FD40649D239149D900279D17 /* GoogleService-Info.plist in Resources */,
 				FDBA727B2348E78D0039B986 /* Assets.xcassets in Resources */,
 				FDBA72762348E78B0039B986 /* Main.storyboard in Resources */,
 			);
@@ -155,11 +193,54 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		1D436CA0960830E51B4930CA /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SDU-Groups/Pods-SDU-Groups-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SDU-Groups/Pods-SDU-Groups-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-SDU-Groups/Pods-SDU-Groups-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		BB52582DDAEFC1E509FDDEB8 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-SDU-Groups-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		FDBA72692348E78B0039B986 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FD406498238D92C000279D17 /* GroupContractViewController.swift in Sources */,
 				FDBA72792348E78B0039B986 /* SDU_Groups.xcdatamodeld in Sources */,
 				FDBA72732348E78B0039B986 /* ViewController.swift in Sources */,
 				FDBA72712348E78B0039B986 /* AppDelegate.swift in Sources */,
@@ -308,6 +389,7 @@
 		};
 		FDBA72832348E78D0039B986 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 28C1D509ECF951E1A259ECB4 /* Pods-SDU-Groups.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -326,6 +408,7 @@
 		};
 		FDBA72842348E78D0039B986 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B92CD41121BBB83458617C80 /* Pods-SDU-Groups.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;

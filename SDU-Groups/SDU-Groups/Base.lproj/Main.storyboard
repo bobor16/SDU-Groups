@@ -13,17 +13,49 @@
         <!--Group Contract-->
         <scene sceneID="chR-Kg-KXY">
             <objects>
-                <viewController title="Group Contract" id="mZe-3P-BCH" sceneMemberID="viewController">
+                <viewController title="Group Contract" id="mZe-3P-BCH" customClass="GroupContractViewController" customModule="SDU_Groups" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="F5e-BB-Wx9">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFill" keyboardDismissMode="onDrag" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="HNQ-x3-dmz">
+                                <rect key="frame" x="20" y="133" width="374" height="554"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences" autocorrectionType="yes" spellCheckingType="yes"/>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleAspectFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NpO-Te-SVp">
+                                <rect key="frame" x="60" y="743" width="113" height="30"/>
+                                <state key="normal" title="Upload Contract"/>
+                                <connections>
+                                    <action selector="uploadToDatabase:" destination="mZe-3P-BCH" eventType="touchUpInside" id="VZJ-uU-TYH"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleAspectFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JSP-to-s3W">
+                                <rect key="frame" x="240" y="743" width="89" height="30"/>
+                                <state key="normal" title="Get Contract"/>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="NpO-Te-SVp" firstAttribute="baseline" secondItem="JSP-to-s3W" secondAttribute="baseline" id="IQr-41-yfp"/>
+                            <constraint firstItem="HNQ-x3-dmz" firstAttribute="leading" secondItem="F5e-BB-Wx9" secondAttribute="leadingMargin" id="NDi-rr-CGX"/>
+                            <constraint firstItem="HNQ-x3-dmz" firstAttribute="trailing" secondItem="F5e-BB-Wx9" secondAttribute="trailingMargin" id="SLo-B5-do0"/>
+                            <constraint firstItem="P1w-Wm-eQp" firstAttribute="bottom" secondItem="NpO-Te-SVp" secondAttribute="bottom" constant="40" id="Xaf-bj-7rI"/>
+                            <constraint firstItem="NpO-Te-SVp" firstAttribute="top" secondItem="HNQ-x3-dmz" secondAttribute="bottom" constant="56" id="kGf-x8-zj1"/>
+                            <constraint firstItem="JSP-to-s3W" firstAttribute="leading" secondItem="NpO-Te-SVp" secondAttribute="trailing" constant="67" id="mO1-gY-cJD"/>
+                            <constraint firstItem="NpO-Te-SVp" firstAttribute="leading" secondItem="P1w-Wm-eQp" secondAttribute="leading" constant="60" id="sDS-vr-lLS"/>
+                            <constraint firstItem="HNQ-x3-dmz" firstAttribute="top" secondItem="P1w-Wm-eQp" secondAttribute="top" constant="45" id="yEA-Am-05v"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="P1w-Wm-eQp"/>
                     </view>
+                    <connections>
+                        <outlet property="textField" destination="HNQ-x3-dmz" id="9qM-ab-RHo"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9d7-bX-wr6" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2046" y="2545"/>
+            <point key="canvasLocation" x="-2482.608695652174" y="2376.5625"/>
         </scene>
         <!--Settings-->
         <scene sceneID="oyp-XX-gCR">
@@ -38,22 +70,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xPn-zD-X40" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1194" y="2545"/>
-        </scene>
-        <!--Schedule-->
-        <scene sceneID="qgN-Kt-aIB">
-            <objects>
-                <viewController title="Schedule" id="iNY-iG-iYT" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="jLU-VK-AN2">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <viewLayoutGuide key="safeArea" id="oQ2-LH-az3"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="9Ru-4X-kir" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-2894" y="2545"/>
+            <point key="canvasLocation" x="-1600" y="2377"/>
         </scene>
         <!--SDU - Groups-->
         <scene sceneID="Jbj-OW-d96">
@@ -76,7 +93,6 @@
                                 <connections>
                                     <action selector="Schedule:" destination="Fdt-Lj-R5Q" eventType="touchUpInside" id="XhT-kG-fur"/>
                                     <action selector="Schedule:" destination="RRY-Tv-C1H" eventType="touchUpInside" id="fXO-3Q-Qro"/>
-                                    <segue destination="iNY-iG-iYT" kind="show" id="48N-Kd-GIW"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZCF-HH-J5Y">

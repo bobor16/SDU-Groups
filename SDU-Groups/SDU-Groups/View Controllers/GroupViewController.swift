@@ -12,7 +12,12 @@ import UIKit
 class GroupViewController: UIViewController{
     
     @IBAction func Schedule(_ sender: UIButton) {
-        print("Hello world")
+        guard let url = URL(string: "https://mitsdu.sdu.dk/skema/default.aspx") else {
+            return
+        }
+        if UIApplication.shared.canOpenURL(url){
+            UIApplication.shared.open(url, options: [:], completionHandler: nil)
+        }
     }
     
     @IBAction func BookRoom(_ sender: UIButton) {
