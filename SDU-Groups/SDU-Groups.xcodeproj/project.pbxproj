@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		81310B79F8782FB8C9CBD978 /* Pods_SDU_Groups.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C834928AE46B8A6268ABCB7C /* Pods_SDU_Groups.framework */; };
+		FD0F1E2423965296005DD137 /* LogInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD0F1E2323965296005DD137 /* LogInViewController.swift */; };
+		FD0F1E2623968196005DD137 /* CreateUserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD0F1E2523968196005DD137 /* CreateUserViewController.swift */; };
+		FD0F1E2823969676005DD137 /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD0F1E2723969675005DD137 /* Utilities.swift */; };
+		FD0F1E2B2396ABA9005DD137 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD0F1E2A2396ABA9005DD137 /* Constants.swift */; };
 		FD406498238D92C000279D17 /* GroupContractViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD406497238D92C000279D17 /* GroupContractViewController.swift */; };
 		FD40649D239149D900279D17 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = FD40649C239149D800279D17 /* GoogleService-Info.plist */; };
 		FDBA72712348E78B0039B986 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDBA72702348E78B0039B986 /* AppDelegate.swift */; };
@@ -24,8 +28,12 @@
 		28C1D509ECF951E1A259ECB4 /* Pods-SDU-Groups.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SDU-Groups.debug.xcconfig"; path = "Target Support Files/Pods-SDU-Groups/Pods-SDU-Groups.debug.xcconfig"; sourceTree = "<group>"; };
 		B92CD41121BBB83458617C80 /* Pods-SDU-Groups.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SDU-Groups.release.xcconfig"; path = "Target Support Files/Pods-SDU-Groups/Pods-SDU-Groups.release.xcconfig"; sourceTree = "<group>"; };
 		C834928AE46B8A6268ABCB7C /* Pods_SDU_Groups.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SDU_Groups.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FD0F1E2323965296005DD137 /* LogInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInViewController.swift; sourceTree = "<group>"; };
+		FD0F1E2523968196005DD137 /* CreateUserViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateUserViewController.swift; sourceTree = "<group>"; };
+		FD0F1E2723969675005DD137 /* Utilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Utilities.swift; path = ../Utilities.swift; sourceTree = "<group>"; };
+		FD0F1E2A2396ABA9005DD137 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		FD406497238D92C000279D17 /* GroupContractViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupContractViewController.swift; sourceTree = "<group>"; };
-		FD40649C239149D800279D17 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
+		FD40649C239149D800279D17 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "/Users/Moni/Developer/SDU-Groups/SDU-Groups/SDU-Groups/../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<absolute>"; };
 		FDBA726D2348E78B0039B986 /* SDU-Groups.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "SDU-Groups.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FDBA72702348E78B0039B986 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FDBA72722348E78B0039B986 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ViewController.swift; path = ../ViewController.swift; sourceTree = "<group>"; };
@@ -59,6 +67,16 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		FD0F1E2923969682005DD137 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				FD0F1E2723969675005DD137 /* Utilities.swift */,
+				FD0F1E2A2396ABA9005DD137 /* Constants.swift */,
+			);
+			name = Helpers;
+			path = "View Controllers/Helpers";
+			sourceTree = "<group>";
+		};
 		FD406499238D980900279D17 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -88,6 +106,7 @@
 		FDBA726F2348E78B0039B986 /* SDU-Groups */ = {
 			isa = PBXGroup;
 			children = (
+				FD0F1E2923969682005DD137 /* Helpers */,
 				FDBA72852348E8100039B986 /* Supporting Files */,
 				FDBA72862348FAA30039B986 /* View Controllers */,
 				FDBA72742348E78B0039B986 /* Main.storyboard */,
@@ -115,6 +134,8 @@
 				FD406497238D92C000279D17 /* GroupContractViewController.swift */,
 				FDBA72872348FAEC0039B986 /* MapViewController.swift */,
 				FDBA72892348FCF80039B986 /* GroupViewController.swift */,
+				FD0F1E2323965296005DD137 /* LogInViewController.swift */,
+				FD0F1E2523968196005DD137 /* CreateUserViewController.swift */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -243,7 +264,11 @@
 				FD406498238D92C000279D17 /* GroupContractViewController.swift in Sources */,
 				FDBA72792348E78B0039B986 /* SDU_Groups.xcdatamodeld in Sources */,
 				FDBA72732348E78B0039B986 /* ViewController.swift in Sources */,
+				FD0F1E2623968196005DD137 /* CreateUserViewController.swift in Sources */,
+				FD0F1E2423965296005DD137 /* LogInViewController.swift in Sources */,
+				FD0F1E2B2396ABA9005DD137 /* Constants.swift in Sources */,
 				FDBA72712348E78B0039B986 /* AppDelegate.swift in Sources */,
+				FD0F1E2823969676005DD137 /* Utilities.swift in Sources */,
 				FDBA72882348FAEC0039B986 /* MapViewController.swift in Sources */,
 				FDBA728A2348FCF80039B986 /* GroupViewController.swift in Sources */,
 			);
@@ -393,13 +418,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = SDQR94QJ65;
+				DEVELOPMENT_TEAM = 7BV23TXF5F;
 				INFOPLIST_FILE = "SDU-Groups/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "dk.sdu.sdu-groups123";
+				PRODUCT_BUNDLE_IDENTIFIER = "dk.sdu.sdu-groups1234";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -412,13 +437,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = SDQR94QJ65;
+				DEVELOPMENT_TEAM = 7BV23TXF5F;
 				INFOPLIST_FILE = "SDU-Groups/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "dk.sdu.sdu-groups123";
+				PRODUCT_BUNDLE_IDENTIFIER = "dk.sdu.sdu-groups1234";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
