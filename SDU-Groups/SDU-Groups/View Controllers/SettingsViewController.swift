@@ -10,8 +10,7 @@ import UIKit
 import Firebase
 
 class SettingsViewController: UIViewController {
-    @IBOutlet weak var signOutButton: UIButton!
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -27,6 +26,4 @@ class SettingsViewController: UIViewController {
         }
         
     }
-    
-
 }

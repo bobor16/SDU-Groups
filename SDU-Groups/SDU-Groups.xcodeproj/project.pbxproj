@@ -13,6 +13,7 @@
 		FD0F1E2623968196005DD137 /* CreateUserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD0F1E2523968196005DD137 /* CreateUserViewController.swift */; };
 		FD0F1E2823969676005DD137 /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD0F1E2723969675005DD137 /* Utilities.swift */; };
 		FD0F1E2B2396ABA9005DD137 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD0F1E2A2396ABA9005DD137 /* Constants.swift */; };
+		FD1651AC23990EC5007C9F3C /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD1651AB23990EC5007C9F3C /* SettingsViewController.swift */; };
 		FD406498238D92C000279D17 /* GroupContractViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD406497238D92C000279D17 /* GroupContractViewController.swift */; };
 		FDBA72712348E78B0039B986 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDBA72702348E78B0039B986 /* AppDelegate.swift */; };
 		FDBA72732348E78B0039B986 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDBA72722348E78B0039B986 /* ViewController.swift */; };
@@ -33,6 +34,7 @@
 		FD0F1E2523968196005DD137 /* CreateUserViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateUserViewController.swift; sourceTree = "<group>"; };
 		FD0F1E2723969675005DD137 /* Utilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Utilities.swift; path = ../Utilities.swift; sourceTree = "<group>"; };
 		FD0F1E2A2396ABA9005DD137 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		FD1651AB23990EC5007C9F3C /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		FD406497238D92C000279D17 /* GroupContractViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupContractViewController.swift; sourceTree = "<group>"; };
 		FDBA726D2348E78B0039B986 /* SDU-Groups.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "SDU-Groups.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FDBA72702348E78B0039B986 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -136,6 +138,7 @@
 				FDBA72892348FCF80039B986 /* GroupViewController.swift */,
 				FD0F1E2323965296005DD137 /* LogInViewController.swift */,
 				FD0F1E2523968196005DD137 /* CreateUserViewController.swift */,
+				FD1651AB23990EC5007C9F3C /* SettingsViewController.swift */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -263,6 +266,7 @@
 			files = (
 				FD406498238D92C000279D17 /* GroupContractViewController.swift in Sources */,
 				FDBA72792348E78B0039B986 /* SDU_Groups.xcdatamodeld in Sources */,
+				FD1651AC23990EC5007C9F3C /* SettingsViewController.swift in Sources */,
 				FDBA72732348E78B0039B986 /* ViewController.swift in Sources */,
 				FD0F1E2623968196005DD137 /* CreateUserViewController.swift in Sources */,
 				FD0F1E2423965296005DD137 /* LogInViewController.swift in Sources */,
