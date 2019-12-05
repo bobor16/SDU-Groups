@@ -14,9 +14,7 @@ class LogInViewController: UIViewController {
 
 
     @IBOutlet weak var usernameField: UITextField!
-    
     @IBOutlet weak var passwordField: UITextField!
-    
     @IBOutlet weak var loginButton: UIButton!
     
     
@@ -47,11 +45,7 @@ class LogInViewController: UIViewController {
                 //Couldn't sign in
                 print("Sign in failed")
             } else {
-                
-                //let groupViewController = self.storyboard!.instantiateViewController(withIdentifier: Constants.Storyboard.groupViewController) as? GroupViewController
-                
-                //self.view.window?.rootViewController = groupViewController
-                //self.view.window?.makeKeyAndVisible()
+
                 self.transitionToHome()
         }
         }

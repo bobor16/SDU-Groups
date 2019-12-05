@@ -7,30 +7,35 @@
 //
 
 import UIKit
-import Firebase
+
 
 class GroupContractViewController: UIViewController{
 
+    @IBOutlet weak var inputKeyTextField: UITextField!
     @IBOutlet weak var textField: UITextView!
-    
-    var ref : DatabaseReference!
+    @IBOutlet weak var uploadContract: UIButton!
+    @IBOutlet weak var getContract: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
         self.hideKeyboardWhenTappedArround()
-        ref = Database.database().reference()
-    
+        // Do any additional setup after loading the view.
     }
-    
     
     @IBAction func uploadToDatabase(_ sender: UIButton) {
-        let event = textField.text
-        ref?.child("Events").setValue(event)
-        NSLog("Uploading...")
+        Constants.ref.db.collection(inputKeyTextField.text!).document("Contract").setData(["User":Constants.cUser.username!.email!, "Contract":textField.text!])
     }
-}
+    
+    @IBAction func getContractFromDatabase(_ sender: UIButton) {
+        Constants.ref.db.collection(inputKeyTextField.text!).document("Contract").getDocument { (document, error) in
+            if error == nil {
+                if document != nil && document!.exists {
+                    }
+                }
+            }
+        }
+    }
+
 
 extension UIViewController {
     func hideKeyboardWhenTappedArround() {
@@ -38,6 +43,7 @@ extension UIViewController {
         tap.cancelsTouchesInView = false
         view.addGestureRecognizer(tap)
     }
+    
     @objc func dismissKeyboard() {
         view.endEditing(true)
     }

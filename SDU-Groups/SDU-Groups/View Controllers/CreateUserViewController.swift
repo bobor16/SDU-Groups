@@ -16,13 +16,9 @@ import FirebaseFirestore
 class CreateUserViewController: UIViewController {
 
     @IBOutlet weak var firstNameTextField: UITextField!
-    
     @IBOutlet weak var lastNameTextField: UITextField!
-    
     @IBOutlet weak var newUsername: UITextField!
-    
     @IBOutlet weak var newPassword: UITextField!
-    
     @IBOutlet weak var createButton: UIButton!
     
     override func viewDidLoad() {

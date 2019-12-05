@@ -7,10 +7,20 @@
 //
 
 import Foundation
+import Firebase
 
 struct Constants {
     
     struct Storyboard {
         static let groupViewController = "groupVC"
     }
+    struct ref {
+        static let db = Firestore.firestore()
+    }
+    
+    struct cUser {
+        static let username = Auth.auth().currentUser
+    }
+    
+    
 }
