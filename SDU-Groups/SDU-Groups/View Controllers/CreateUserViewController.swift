@@ -95,11 +95,13 @@ class CreateUserViewController: UIViewController {
         
         print("There's something wrong with the fields")
     }
+    
     func transitionToHome() {
-        let groupViewController = storyboard?.instantiateViewController(withIdentifier: Constants.Storyboard.groupViewController) as? GroupViewController
+        let appDelegate = UIApplication.shared.delegate! as! AppDelegate
         
-        view.window?.rootViewController = groupViewController
-        view.window?.makeKeyAndVisible()
+        let initialViewController = self.storyboard!.instantiateViewController(withIdentifier: "groupVC")
+        appDelegate.window?.rootViewController = initialViewController
+        appDelegate.window?.makeKeyAndVisible()
     }
 
     @objc func keyboardWillShow(notification: NSNotification) {

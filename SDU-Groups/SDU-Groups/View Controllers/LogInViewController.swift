@@ -24,8 +24,8 @@ class LogInViewController: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-        //NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow), name: UIResponder.keyboardWillShowNotification, object: nil)
-        //NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide), name: UIResponder.keyboardWillHideNotification, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow), name: UIResponder.keyboardWillShowNotification, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide), name: UIResponder.keyboardWillHideNotification, object: nil)
        
         self.hideKeyboardWhenTappedArround()
         
@@ -52,23 +52,20 @@ class LogInViewController: UIViewController {
                 
                 //self.view.window?.rootViewController = groupViewController
                 //self.view.window?.makeKeyAndVisible()
-                let appDelegate = UIApplication.shared.delegate! as! AppDelegate
-                
-                let initialViewController = self.storyboard!.instantiateViewController(withIdentifier: "groupVC")
-                appDelegate.window?.rootViewController = initialViewController
-                appDelegate.window?.makeKeyAndVisible()
+                self.transitionToHome()
         }
-        
+        }
     }
-    
-        func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        let backItem = UIBarButtonItem()
-        backItem.title = "Back"
-        navigationItem.backBarButtonItem = backItem
-    }
+        func transitionToHome() {
+            let appDelegate = UIApplication.shared.delegate! as! AppDelegate
+            
+            let initialViewController = self.storyboard!.instantiateViewController(withIdentifier: "groupVC")
+            appDelegate.window?.rootViewController = initialViewController
+            appDelegate.window?.makeKeyAndVisible()
+        }
 
     
-        func keyboardWillShow(notification: NSNotification) {
+        @objc func keyboardWillShow(notification: NSNotification) {
         if let keyboardSize = (notification.userInfo?[UIResponder.keyboardFrameBeginUserInfoKey] as? NSValue)?.cgRectValue {
             if self.view.frame.origin.y == 0 {
                 self.view.frame.origin.y -= keyboardSize.height
@@ -76,13 +73,10 @@ class LogInViewController: UIViewController {
         }
     }
     
-        func keyboardWillHide(notification: NSNotification) {
+       @objc func keyboardWillHide(notification: NSNotification) {
         if self.view.frame.origin.y != 0 {
             self.view.frame.origin.y = 0
         }
     }
-    
-    
 }
 
-}
