@@ -24,6 +24,8 @@ class LogInViewController: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        //NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow), name: UIResponder.keyboardWillShowNotification, object: nil)
+        //NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide), name: UIResponder.keyboardWillHideNotification, object: nil)
        
         self.hideKeyboardWhenTappedArround()
         
@@ -46,16 +48,41 @@ class LogInViewController: UIViewController {
                 print("Sign in failed")
             } else {
                 
-                let groupViewController = self.storyboard?.instantiateViewController(withIdentifier: Constants.Storyboard.groupViewController) as? GroupViewController
+                //let groupViewController = self.storyboard!.instantiateViewController(withIdentifier: Constants.Storyboard.groupViewController) as? GroupViewController
                 
-                self.view.window?.rootViewController = groupViewController
-                self.view.window?.makeKeyAndVisible()
+                //self.view.window?.rootViewController = groupViewController
+                //self.view.window?.makeKeyAndVisible()
+                let appDelegate = UIApplication.shared.delegate! as! AppDelegate
                 
-            }
+                let initialViewController = self.storyboard!.instantiateViewController(withIdentifier: "groupVC")
+                appDelegate.window?.rootViewController = initialViewController
+                appDelegate.window?.makeKeyAndVisible()
         }
         
+    }
+    
+        func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let backItem = UIBarButtonItem()
+        backItem.title = "Back"
+        navigationItem.backBarButtonItem = backItem
+    }
+
+    
+        func keyboardWillShow(notification: NSNotification) {
+        if let keyboardSize = (notification.userInfo?[UIResponder.keyboardFrameBeginUserInfoKey] as? NSValue)?.cgRectValue {
+            if self.view.frame.origin.y == 0 {
+                self.view.frame.origin.y -= keyboardSize.height
+            }
+        }
+    }
+    
+        func keyboardWillHide(notification: NSNotification) {
+        if self.view.frame.origin.y != 0 {
+            self.view.frame.origin.y = 0
+        }
     }
     
     
 }
 
+}
