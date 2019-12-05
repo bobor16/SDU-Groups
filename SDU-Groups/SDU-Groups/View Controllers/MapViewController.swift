@@ -10,7 +10,19 @@ import UIKit
 import MapKit
 import CoreLocation
 
-class MapViewController: UIViewController  {
+class customPin: NSObject, MKAnnotation {
+    var coordinate: CLLocationCoordinate2D
+    var title: String?
+    var subtitle: String?
+    
+    init(pinTitle:String, pinSubTitle:String, location:CLLocationCoordinate2D) {
+        self.title = pinTitle
+        self.subtitle = pinSubTitle
+        self.coordinate = location
+    }
+}
+
+class MapViewController: UIViewController, MKMapViewDelegate {
     
     /*
      SDU's location - rookie mistake, use comma
@@ -18,21 +30,70 @@ class MapViewController: UIViewController  {
      Longitude = 10;428282
      */
     
- 
+    
     @IBOutlet weak var mapView: MKMapView!
     let locationManager = CLLocationManager()
     let regionInMeters: Double = 400
+    
+    let latitude: CLLocationDegrees = 55.368963
+    let longitude: CLLocationDegrees = 10.428282
     
     // alert button for not enabled gps
     //let gpsNotEnabled = UIAlertController(title: "Location not found", message: "To use this function go to settings and enable gps.", preferredStyle: UIAlertController.Style.alert)
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        checkLocationServices()
-
+        //        checkLocationServices()
+        //        openMapForPlace()
+        let location = CLLocationCoordinate2D(latitude: 55.368963, longitude:10.428282)
+        let location2 = CLLocationCoordinate2D(latitude: 56.368963, longitude:11.428282)
+        let region = MKCoordinateRegion(center: location, span: MKCoordinateSpan(latitudeDelta: 0.005, longitudeDelta: 0.005))
+        self.mapView.setRegion(region, animated: true)
+        
+        let pin = customPin(pinTitle: "Room U172", pinSubTitle: "Building 44", location: location)
+        self.mapView.addAnnotation(pin)
+        self.mapView.delegate = self
+        
+        let pin2 = customPin(pinTitle: "Honory Dalailama Temple", pinSubTitle: "Dharamshala, Himachal Pradesh, India", location: location2)
+        self.mapView.addAnnotation(pin2)
+        self.mapView.delegate = self
         // Do any additional setup after loading the view.
         
+    }
+    func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
+        if annotation is MKUserLocation {
+            return nil
         }
+        
+        let annotationView = MKAnnotationView(annotation: annotation, reuseIdentifier: "customannotation")
+        let annotationView2 = MKAnnotationView(annotation: annotation, reuseIdentifier: "customannotation")
+        annotationView.image = UIImage(named:"pin")
+        annotationView2.image = UIImage(named:"pin2")
+        annotationView.canShowCallout = true
+        return annotationView
+    }
+    
+    func mapView(_ mapView: MKMapView, didSelect view: MKAnnotationView) {
+        print("annotation title == \(String(describing: view.annotation?.title!))")
+    }
+    
+    func openMapForPlace() {
+        
+        let regionDistance:CLLocationDistance = 400
+        let coordinates = CLLocationCoordinate2DMake(latitude, longitude)
+        let regionSpan = MKCoordinateRegion(center: coordinates, latitudinalMeters: regionDistance, longitudinalMeters: regionDistance)
+        let options = [
+            MKLaunchOptionsMapCenterKey: NSValue(mkCoordinate: regionSpan.center),
+            MKLaunchOptionsMapSpanKey: NSValue(mkCoordinateSpan: regionSpan.span)
+        ]
+        let placemark = MKPlacemark(coordinate: coordinates, addressDictionary: nil)
+        let mapItem = MKMapItem(placemark: placemark)
+        mapItem.name = "Your Location"
+        mapItem.openInMaps(launchOptions: options)
+    }
+    
+    
+    
     func setupLocationManager() {
         locationManager.delegate = self
         locationManager.desiredAccuracy = kCLLocationAccuracyBest
@@ -111,5 +172,3 @@ extension MapViewController: CLLocationManagerDelegate {
     }
     
 }
-  
-
