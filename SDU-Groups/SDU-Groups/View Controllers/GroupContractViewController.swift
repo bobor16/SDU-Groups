@@ -36,7 +36,6 @@ class GroupContractViewController: UIViewController{
         }
     }
 
-
 extension UIViewController {
     func hideKeyboardWhenTappedArround() {
         let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(UIViewController.dismissKeyboard))

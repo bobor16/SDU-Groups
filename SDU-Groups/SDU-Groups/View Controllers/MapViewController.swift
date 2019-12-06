@@ -43,7 +43,7 @@ class MapViewController: UIViewController, MKMapViewDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        //        checkLocationServices()
+               checkLocationServices()
         //        openMapForPlace()
         let location = CLLocationCoordinate2D(latitude: 55.368963, longitude:10.428282)
         let location2 = CLLocationCoordinate2D(latitude: 56.368963, longitude:11.428282)
@@ -78,7 +78,7 @@ class MapViewController: UIViewController, MKMapViewDelegate {
     }
     
     func openMapForPlace() {
-        
+
         let regionDistance:CLLocationDistance = 400
         let coordinates = CLLocationCoordinate2DMake(latitude, longitude)
         let regionSpan = MKCoordinateRegion(center: coordinates, latitudinalMeters: regionDistance, longitudinalMeters: regionDistance)
@@ -126,6 +126,7 @@ class MapViewController: UIViewController, MKMapViewDelegate {
         case .authorizedWhenInUse:
             // Do Map Stuff
             mapView.showsUserLocation = true
+            
             centerViewOnUserLocation()
             locationManager.startUpdatingLocation()
             print("ShowUserLocation is set to true")
